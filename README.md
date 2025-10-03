@@ -24,3 +24,6 @@ How to run
 ```bash
 pip install pandas matplotlib
 ```
+<img width="1189" height="889" alt="9bd2e566-056e-4cda-a853-fccca9864fa3" src="https://github.com/user-attachments/assets/872cb7fb-b85f-4076-8df5-fe7f4454415b" />
+<img width="1189" height="889" alt="d98f0db0-6178-4db1-bbfa-15e4009f4abb" src="https://github.com/user-attachments/assets/81a98099-ec14-4ee5-bba6-c8319a258c61" />
+<img width="1990" height="989" alt="bb825c8f-4520-4747-858b-cb5854b6f565" src="https://github.com/user-attachments/assets/a482b16c-c132-41a6-a05b-1853fea4ca3e" />
