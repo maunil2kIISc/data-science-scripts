@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>District - Taluka Plantation Status — Overview</title>
+    <style>
+      :root{--bg:#f7fafc;--card:#ffffff;--muted:#6b7280;--accent:#0f172a}
+      body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;line-height:1.6;margin:0;background:var(--bg);color:var(--accent)}
+      .container{max-width:980px;margin:36px auto;padding:24px}
+      header{display:flex;align-items:center;gap:16px}
+      header h1{margin:0;font-size:1.6rem}
+      .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(15,23,42,0.06);margin-top:18px}
+      .muted{color:var(--muted)}
+      img.responsive{width:100%;height:auto;border-radius:8px;margin-top:12px}
+      pre.cmd{background:#0b1220;color:#e6eef8;padding:12px;border-radius:8px;overflow:auto}
+      a.button{display:inline-block;padding:8px 12px;background:#0b5fff;color:#fff;border-radius:8px;text-decoration:none}
+      ul.inline{display:flex;flex-wrap:wrap;gap:8px;padding-left:0;list-style:none}
+      footer{margin-top:28px;color:var(--muted);font-size:0.9rem}
+      @media (max-width:600px){.container{margin:14px;padding:16px}}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <rect width="24" height="24" rx="6" fill="#0b5fff"/>
+          <path d="M6 14c2-3 6-5 10-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div>
+          <h1>District - Taluka wise 10 Crore Plantation Status (Maharashtra)</h1>
+          <div class="muted">A small exploratory analysis of the dataset (as on 08-09-2025)</div>
+        </div>
+      </header>
+
+      <section class="card">
+        <h2>About this repository</h2>
+        <p>This repository contains an exploratory analysis of the "District - Taluka wise 10 Crore Plantation Status" dataset released by the Forest Department of Maharashtra (dataset snapshot: <strong>08-09-2025</strong>).</p>
+        <p>Files in this repo:</p>
+        <ul>
+          <li><a href="./Plantation_2.csv">Plantation_2.csv</a> — raw dataset (district/taluka planting statistics)</li>
+          <li><a href="./Research_methods_assignment_5.ipynb">Research_methods_assignment_5.ipynb</a> — Jupyter notebook with analysis and visualizations</li>
+        </ul>
+        <p>Original data source: <a href="https://www.data.gov.in/resource/district-taluka-wise-10-crore-plantation-status-forest-department-maharashtra-state-08-09" target="_blank" rel="noopener">data.gov.in</a></p>
+      </section>
+
+      <section class="card">
+        <h2>What the analysis does</h2>
+        <ul>
+          <li>Loads <code>Plantation_2.csv</code>, coerces numeric fields and strips formatting (commas, extra whitespace).</li>
+          <li>Creates visualizations: scatter plot (planned seedlings vs pits dug), box plots of distributions, and a top-20 bar chart of seedlings planted.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Key observations</h2>
+        <ul>
+          <li>No. of pits dug shows a linear trend for the majority of districts, though some districts recorded seedling planting without pits being dug.</li>
+          <li>From box plots: median counts for planned seedlings, pits dug, and seedlings planted are roughly <strong>100,000</strong>, <strong>75,000</strong>, and <strong>60,000</strong> respectively.</li>
+          <li>Top 20 districts (by seedlings planted):</li>
+        </ul>
+        <ol>
+          <li>Chandrapur</li>
+          <li>Ahilyanagar</li>
+          <li>Gadchiroli</li>
+          <li>Nashik</li>
+          <li>Beed</li>
+          <li>Dharashiv</li>
+          <li>Akola</li>
+          <li>Solapur</li>
+          <li>Yavatmal</li>
+          <li>Gondia</li>
+          <li>Jalgaon</li>
+          <li>Nanded</li>
+          <li>Raigad</li>
+          <li>Palghar</li>
+          <li>Amravati</li>
+          <li>Nagpur</li>
+          <li>Chhatrapati Sambhajinagar</li>
+          <li>Pune</li>
+          <li>Buldhana</li>
+          <li>Latur</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>Visualizations</h2>
+        <p>The repository includes screenshots generated from the notebook. Click to open full-size.</p>
+        <a href="https://github.com/user-attachments/assets/872cb7fb-b85f-4076-8df5-fe7f4454415b" target="_blank" rel="noopener">
+          <img class="responsive" src="https://github.com/user-attachments/assets/872cb7fb-b85f-4076-8df5-fe7f4454415b" alt="scatter plot example"/>
+        </a>
+        <a href="https://github.com/user-attachments/assets/81a98099-ec14-4ee5-bba6-c8319a258c61" target="_blank" rel="noopener">
+          <img class="responsive" src="https://github.com/user-attachments/assets/81a98099-ec14-4ee5-bbfa-15e4009f4abb" alt="boxplots"/>
+        </a>
+        <a href="https://github.com/user-attachments/assets/a482b16c-c132-41a6-a05b-1853fea4ca3e" target="_blank" rel="noopener">
+          <img class="responsive" src="https://github.com/user-attachments/assets/a482b16c-c132-41a6-a05b-1853fea4ca3e" alt="top 20 bar chart"/>
+        </a>
+      </section>
+
+      <section class="card">
+        <h2>How to run the notebook</h2>
+        <p>Requirements: Python 3.8+ and the packages used in the notebook (pandas, matplotlib).</p>
+        <pre class="cmd">pip install pandas matplotlib</pre>
+        <p>Open the notebook with Jupyter or a compatible viewer (VS Code's notebook UI):</p>
+        <ul class="inline">
+          <li><a class="button" href="./Research_methods_assignment_5.ipynb">Open notebook</a></li>
+          <li><a class="button" href="./Plantation_2.csv">View CSV</a></li>
+        </ul>
+        <p class="muted">Tip: to serve the static site locally, from this repo run <code>python -m http.server</code> and open <code>http://localhost:8000/</code></p>
+      </section>
+
+      <footer>
+        <div>Created from the repository README. Dataset and images are included in this repository where applicable.</div>
+      </footer>
+    </div>
+  </body>
+</html>
